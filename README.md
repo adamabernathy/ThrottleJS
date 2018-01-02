@@ -1,4 +1,4 @@
-# ThrottleJS
+# fetch-throttle
 
 > Throttles HTTP/HTTP2 connections.
 
