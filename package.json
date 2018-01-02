@@ -1,0 +1,12 @@
+{
+  "name": "ThrottleJS",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://adamabernathy.github.io/ThrottleJS/",
+  "prettier": {
+    "semi": true,
+    "printWidth": 100,
+    "singleQuote": true,
+    "trailingComma": "all"
+  }
+}
