@@ -14,6 +14,12 @@
   }
 }
 
+// @todo: change public api to ([urls], {options})
+// @todo: convert to es6 promise
+// @todo: test memory to see if we really need to clone _requests
+// @todo: surface cycleLimt
+// @todo: surface onerror
+// @todo: convert entire thing to es6 module
 function throttleRequests(requests, maxConnections = 2) {
   const _requests = requests;
   _requests.map((k, i) => {
@@ -36,7 +42,7 @@ function throttleRequests(requests, maxConnections = 2) {
 
   const cycleLimit = 10; // Set really low right now. Could be set to like 10k
   let cycleCount = 0;
-  let requestsPending = numberOfRequests > 0 ? true : false; // needs some safety
+  let requestsPending = numberOfRequests > 0 ? true : false;
   while (requestsPending) {
     _requests.map((k, i) => {
       if (k.status === 'pending' && activeRequests < maxConnections) {
